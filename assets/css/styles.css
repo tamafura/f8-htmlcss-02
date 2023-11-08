@@ -1,0 +1,829 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins";
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ======== Common - Những thành phần chung ========*/
+.content {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 118px;
+    padding: 18px 16px;
+    border-radius: 25px;
+    background: #171100;
+    color: #fff;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #ffb900;
+}
+
+/* ======== CSS HEADER ========*/
+.header {
+    height: 100vh;
+    background: #fffcf4;
+}
+
+.header .navbar {
+    display: flex;
+    align-items: center;
+}
+
+.header .navbar .nav-item {
+    margin-left: auto;
+}
+
+.navbar {
+    padding-top: 36px;
+}
+
+.navbar .link {
+    --position-navlink: 42px;
+    padding: 0 var(--position-navlink);
+    position: relative;
+    color: #5f5b53;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75; /* 175% */
+}
+
+.navbar .link:hover {
+    color: #171100;
+    font-weight: 600;
+}
+
+.navbar .link:hover::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: var(--position-navlink);
+    bottom: -2px;
+    width: 12px;
+    border: 1px solid #171100;
+    border-radius: 999px;
+}
+
+.navbar .cta {
+    min-width: 144px;
+    padding: 17px 16px;
+    margin-left: 28px;
+    border-radius: 24.5px;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.header .hero {
+    display: flex;
+    margin-top: 64px;
+}
+
+.header .hero .img-block {
+    position: relative;
+}
+
+.header .hero .trend {
+    position: absolute;
+    right: -100px;
+    bottom: 48px;
+}
+
+.header .hero .image {
+    width: 470px;
+    height: 685px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.header .hero .info {
+    margin-top: 64px;
+    margin-left: 230px;
+}
+
+.header .info .title {
+    color: #171100;
+    font-family: "Sen", sans-serif;
+    font-size: 5.8rem;
+    font-weight: 700;
+    line-height: 1.17; /* 117.241% */
+    letter-spacing: -0.116rem;
+}
+
+.header .info .desc {
+    margin-top: 22px;
+    color: #5f5b53;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.67; /* 166.667% */
+}
+
+.header .info .hero-link {
+    display: flex;
+    align-items: center;
+    margin-top: 38px;
+}
+
+.header .info .hero-cta {
+    min-width: 180px;
+    padding: 17px 16px;
+    border-radius: 32px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67; /* 166.667% */
+}
+
+.header .info .radius {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-left: 28px;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+.header .info .button-link {
+    margin-left: 14px;
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67; /* 166.667% */
+    transition: 0.4s;
+}
+
+.header .info .button-link:hover {
+    opacity: 0.7;
+}
+
+.header .info .triangle {
+    display: inline-block;
+    position: absolute;
+    top: 14px;
+    left: 46%;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent transparent #ffb900;
+}
+
+.header .info .sub-title {
+    margin-top: 48px;
+    color: #5f5b53;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.67; /* 166.667% */
+}
+
+.header .hero .value {
+    display: flex;
+    gap: 28px;
+}
+
+.header .hero .value-item {
+    color: #171100;
+    font-family: "Sen";
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 1.23; /* 122.727% */
+}
+
+.header .hero .value-sub {
+    margin-left: 14px;
+    color: #5f5b53;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.header .trend {
+    width: 270px;
+    height: 244px;
+    padding: 28px 24px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.header .trend .trend-item {
+    display: flex;
+    align-items: center;
+    margin-top: 14px;
+}
+
+.header .trend .trend-item:first-child {
+    margin-top: 0;
+}
+
+.header .trend .icon {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.header .trend .icon-1 {
+    background: #fff9e8;
+}
+
+.header .trend .icon-2 {
+    background: #fcefff;
+}
+
+.header .trend .icon-3 {
+    background: #ebeaff;
+}
+
+.header .trend .image-icon {
+    width: 24px;
+    height: 24px;
+    margin: auto;
+}
+
+.header .trend .course {
+    color: #5f5b53;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.89; /* 185.714% */
+}
+
+.header .trend .trend-info {
+    margin-left: 16px;
+}
+
+.header .trend .jobs {
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67; /* 166.667% */
+}
+
+/* ======== CSS POPULAR ========*/
+.popular {
+    margin-top: 200px;
+}
+
+.popular .title {
+    color: #171100;
+    font-family: "Sen";
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.26; /* 126.316% */
+    letter-spacing: -0.076rem;
+}
+
+.popular .row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.popular .sub-title {
+    width: 458px;
+    color: #5f5b53;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.67; /* 166.667% */
+}
+
+.popular .button {
+    display: flex;
+    margin-top: -22px;
+}
+
+.popular .button .page-cta {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ffb900;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.popular .button .page-cta:hover {
+    background: #ffb900;
+}
+
+.popular .page-cta:hover .arrow {
+    border: solid #fff;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.popular .button .button-right {
+    margin-left: 18px;
+}
+
+.popular .arrow {
+    position: relative;
+    border: solid #ffb900;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.popular .arrow-left {
+    top: 9px;
+    left: 17px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.popular .arrow-right {
+    top: 9px;
+    left: 14px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.popular .popular-item {
+    display: flex;
+    gap: 30px;
+    margin-top: 55px;
+}
+
+.popular .popular-item .list-item {
+    border-radius: 12px;
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.popular .popular-item .image {
+    width: 100%;
+    height: 278px;
+    object-fit: cover;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.popular .popular-item .item-info {
+    padding: 16px 22px 22px;
+}
+
+.popular .popular-item .item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular .item-row .item-title {
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67; /* 166.667% */
+}
+
+.popular .item-row .evaluate {
+    display: flex;
+    align-items: center;
+}
+
+.popular .item-row .ranking {
+    margin-left: 4px;
+    color: #fea31b;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75; /* 175% */
+}
+
+.popular .item-info .desc {
+    margin-top: 6px;
+    color: #5f5b53;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.86; /* 185.714% */
+}
+
+.popular .item-cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.popular .item-cta .price {
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67; /* 166.667% */
+}
+
+/* ======== CSS FEEDBACK ========*/
+.feedback {
+    height: 380px;
+    margin-top: 200px;
+    background: #2e2100;
+}
+
+.feedback .body {
+    display: flex;
+}
+
+.feedback .student {
+    width: 37%;
+    padding-top: 96px;
+}
+
+.feedback .comment {
+    position: relative;
+    width: 63%;
+    padding-top: 124px;
+}
+
+.feedback .body .avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.feedback .body .name {
+    margin-top: 18px;
+    color: #f7f7f7;
+    font-family: "Sen";
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.42; /* 141.667% */
+}
+
+.feedback .body .title {
+    margin-top: 4px;
+    color: #bfbcb2;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.86; /* 185.714% */
+}
+
+.feedback .body .dot {
+    margin-top: 28px;
+}
+
+.feedback .comment .student-comment {
+    color: #fff;
+    font-size: 2.6rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.54; /* 153.846% */
+}
+
+.feedback .comment .quotes {
+    position: absolute;
+    top: 96px;
+    left: -30px;
+}
+
+/* ======== CSS FEATURES ========*/
+.features {
+    margin-top: 200px;
+}
+
+.features .body-up {
+    display: flex;
+}
+
+.features .body-up .image-block {
+    width: 50%;
+}
+
+.features .body-up .image-block {
+    display: flex;
+    gap: 30px;
+}
+
+.features .body-up .image {
+    width: 270px;
+    height: 404px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.features .body-up .features-img-1 {
+    margin-top: 34px;
+}
+
+.features .body-up .info {
+    margin: 58px 0 0 130px;
+}
+
+.features .body-up .title {
+    color: #171100;
+    font-family: "Sen";
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.26; /* 126.316% */
+    letter-spacing: -0.076rem;
+}
+
+.features .body-up .desc {
+    margin-top: 16px;
+    color: #5f5b53;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75; /* 175% */
+}
+
+.features .body-up .report {
+    margin-top: 16px;
+    color: #5f5b53;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75; /* 175% */
+}
+
+.features .body-up .features-cta {
+    min-width: 137px;
+    margin-top: 32px;
+    border-radius: 26px;
+}
+
+.features .body-down {
+    display: flex;
+    margin-top: 200px;
+}
+
+.features .body-down .info {
+    width: 50%;
+    margin-top: 71px;
+}
+
+.features .body-down .title {
+    color: #171100;
+    font-family: "Sen";
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.26; /* 126.316% */
+    letter-spacing: -0.076rem;
+}
+
+.features .body-down .desc {
+    margin-top: 16px;
+    color: #5f5b53;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75; /* 175% */
+}
+
+.features .body-down .features-cta {
+    min-width: 137px;
+    margin-top: 32px;
+    border-radius: 26px;
+}
+
+.features .body-down .image {
+    width: 470px;
+    height: 440px;
+    margin-left: 130px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* ======== CSS BLOG ========*/
+.blog {
+    margin-top: 200px;
+    background: #fffcf4;
+}
+
+.blog .body {
+    padding: 96px 0;
+}
+
+.blog .blog-header {
+    width: 448px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.blog .blog-header .title {
+    color: #130606;
+    font-family: "Sen";
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.26; /* 126.316% */
+    letter-spacing: -0.076rem;
+}
+
+.blog .blog-header .sub-title {
+    margin-top: 16px;
+    color: #696262;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75; /* 175% */
+}
+
+.blog .item {
+    display: flex;
+    gap: 30px;
+    margin-top: 55px;
+}
+
+.blog .item .list-item {
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.blog .item .image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 16px 16px 0px 0px;
+}
+
+.blog .item .info {
+    padding: 20px 20px 28px;
+}
+
+.blog .info .time {
+    color: #5f5b53;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.86; /* 185.714% */
+}
+
+.blog .info .time::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    left: 0;
+    bottom: 2px;
+    width: 6px;
+    height: 6px;
+    margin-right: 4px;
+    background: #ffb900;
+    border-radius: 50%;
+}
+
+.blog .info .separate {
+    width: 160px;
+    height: 1px;
+    margin-top: 12px;
+    border-radius: 0.5px;
+    background: #e2dfda;
+}
+
+.blog .info .item-title {
+    margin-top: 12px;
+    color: #171100;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.75; /* 175% */
+}
+
+.blog .blog-cta {
+    margin-top: 12px;
+}
+
+.blog .dot {
+    display: block;
+    margin: 38px auto 0;
+}
+
+/* ======== CSS FOOTER ========*/
+.footer {
+    height: 428px;
+    background: #2e2100;
+}
+
+.footer .body {
+    display: flex;
+    padding: 96px 0 0;
+}
+
+.footer .body .lesson {
+    width: 35%;
+}
+
+.footer .body .desc {
+    width: 267px;
+    margin-top: 18px;
+    color: #bfbcb2;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.86; /* 185.714% */
+}
+
+.footer .body .social-link {
+    transition: 0.2s;
+}
+
+.footer .body .social-link:hover {
+    opacity: 0.7;
+}
+
+.footer .body .social-image {
+    margin-top: 18px;
+}
+
+.footer .body .row {
+    display: flex;
+    width: 65%;
+}
+
+.footer .row .column:nth-child(1) {
+    width: 34%;
+}
+
+.footer .row .column:nth-child(2) {
+    width: 35%;
+}
+
+.footer .row .column:nth-child(3) {
+    width: 31%;
+}
+
+.footer .column .heading {
+    position: relative;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.75; /* 175% */
+}
+
+.footer .column .heading::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 42px;
+    left: 0;
+    width: 130px;
+    height: 1px;
+    border-radius: 999px;
+    background: #59554b;
+}
+
+.footer .column .list {
+    margin-top: 43px;
+}
+
+.footer .column .item {
+    margin-top: 12px;
+}
+
+.footer .column .item:first-child {
+    margin-top: 0;
+}
+
+.footer .column .link {
+    color: #bfbcb2;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.86; /* 185.714% */
+    transition: 0.2s;
+}
+
+.footer .column .link:hover {
+    opacity: 0.7;
+}
+
+.footer .address {
+    margin-top: 43px;
+}
+
+.footer .address .address-info {
+    margin-top: 12px;
+    color: #bfbcb2;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.85;
+}
+
+.footer .address .highlight {
+    color: #fff;
+    font-weight: 600;
+}
+
+.footer .separate {
+    height: 1px;
+    margin-top: 38px;
+    background: #59554b;
+}
+
+.footer .copyright {
+    margin-top: 28px;
+}
+
+.footer .copy-info {
+    color: #807d74;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.86; /* 185.714% */
+}
