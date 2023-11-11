@@ -71,8 +71,9 @@ a {
 }
 
 .navbar .link:hover {
+    text-shadow: 1px 0 0 currentColor;
     color: #171100;
-    font-weight: 600;
+    /* font-weight: 600; */
 }
 
 .navbar .link:hover::before {
